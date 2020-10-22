@@ -1,1 +1,1 @@
-console.log("hello");
+document.querySelector("#content").appendChild(document.createElement("nav")).setAttribute("class","navbar navbar-expand-lg navbar-light bg-light justify-content-between");
