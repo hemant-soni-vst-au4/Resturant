@@ -1,4 +1,5 @@
 import {home} from './home';
+import {menu} from './menu'
 
 let main = document.querySelector('#content');
 
@@ -11,20 +12,29 @@ const navbar = () => {
     nav_div.innerHTML = `
          <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link home" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link menu" href="#">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact us</a>
+            <a class="nav-link contact" href="#">Contact us</a>
           </li>
-        </ul>
-    `
+        </ul>`
 };
+navbar();
+home();
+document.querySelector(".home").addEventListener("click", function() {
+   return home();
+});
+document.querySelector(".menu").addEventListener("click", function() {
+    return menu();
+});
 
 
-navbar()
-home()
+
+
+
+
 
 

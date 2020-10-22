@@ -8,4 +8,4 @@ export const home = () => {
     document.querySelector(".lead").innerHTML = "Feeling Hungry!!! Order Here";
  }
 
- let main = document.querySelector('#content');
+let main = document.querySelector('#content');
