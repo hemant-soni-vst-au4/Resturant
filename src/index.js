@@ -1,5 +1,7 @@
+import {home} from './home';
+
 let main = document.querySelector('#content');
-let section = main.appendChild(document.createElement('section'));
+
 const navbar = () => {
     let nav = main.appendChild(document.createElement('nav'));
     nav.setAttribute("class","navbar navbar-expand-lg navbar-light bg-light justify-content-between")
@@ -19,13 +21,10 @@ const navbar = () => {
           </li>
         </ul>
     `
-}
+};
 
-const home = () => {
-   
-
-}
 
 navbar()
+home()
 
 
