@@ -1,4 +1,5 @@
-export const menu = () => {
+let main = document.querySelector('#content');
+const menu = () => {
     let section = main.appendChild(document.createElement('section'))
     let section_div =  section.appendChild(document.createElement('div'))
     section_div.setAttribute("class","row mt-2")
@@ -15,5 +16,6 @@ export const menu = () => {
       bulk of the card's content.
     </p>
     <a href="#" class="btn btn-primary">Go somewhere</a>`
+    return section
 }
- let main = document.querySelector('#content');
+export default menu;

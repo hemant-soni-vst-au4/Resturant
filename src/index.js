@@ -1,5 +1,5 @@
-import {home} from './home';
-import {menu} from './menu'
+import home from './home';
+import menu from './menu'
 
 let main = document.querySelector('#content');
 
@@ -21,15 +21,19 @@ const navbar = () => {
             <a class="nav-link contact" href="#">Contact us</a>
           </li>
         </ul>`
+        document.querySelector(".home").addEventListener("click", function(e) {
+          e.preventDefault();
+          home();
+        });
+        document.querySelector(".menu").addEventListener("click", function(e) {
+          e.preventDefault();
+          menu();
+        });
+      return nav;
 };
 navbar();
-home();
-document.querySelector(".home").addEventListener("click", function() {
-   return home();
-});
-document.querySelector(".menu").addEventListener("click", function() {
-    return menu();
-});
+
+
 
 
 
