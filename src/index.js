@@ -18,21 +18,27 @@ const navbar = () => {
             <a class="nav-link menu" href="#">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link contact" href="#">Contact us</a>
+            <a class="nav-link contact" href="#contact">Contact us</a>
           </li>
         </ul>`
-        document.querySelector(".home").addEventListener("click", function(e) {
-          e.preventDefault();
-          home();
-        });
-        document.querySelector(".menu").addEventListener("click", function(e) {
-          e.preventDefault();
-          menu();
-        });
+        
       return nav;
 };
-navbar();
 
+navbar();
+home();
+
+document.querySelector(".home").addEventListener("click", function(e) {
+  e.preventDefault()
+  document.querySelector('#content').removeChild(document.querySelector(".sec"));
+  home();
+});
+
+document.querySelector(".menu").addEventListener("click", function(e) {
+  e.preventDefault()
+  document.querySelector('#content').removeChild(document.querySelector(".sec"));
+  menu();
+});
 
 
 
